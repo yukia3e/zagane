@@ -20,20 +20,12 @@ $ go get -u github.com/gcpug/zagane
 
 ## How to use
 
-`zagane` run with `go vet` as below when Go is 1.12 and higher.
+`zagane` run with `go vet` as below.
 
 ```bash
 $ go vet -vettool=$(which zagane) github.com/gcpug/spshovel/...
 # github.com/gcpug/spshovel/spanner
 spanner/spanner_service.go:29:29: iterator must be stop
-```
-
-When Go is lower than 1.12, just run `zagane` command with the package name (import path).
-But it cannot accept some options such as `--tags`.
-
-```bash
-$ zagane github.com/gcpug/spshovel/...
-~/go/src/github.com/gcpug/spshovel/spanner/spanner_service.go:29:29: iterator must be stop
 ```
 
 ## Analyzers
